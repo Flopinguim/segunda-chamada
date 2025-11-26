@@ -1,4 +1,4 @@
-# 🎓 Sistema de Solicitação de Segunda Chamada
+﻿# 🚀 Sistema de Solicitação de Segunda Chamada
 
 Sistema web desenvolvido em Django para gerenciar solicitações de segunda chamada de provas entre alunos e professores, com interface moderna e intuitiva.
 
@@ -7,7 +7,7 @@ Sistema web desenvolvido em Django para gerenciar solicitações de segunda cham
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blue)
 ![SQLite](https://img.shields.io/badge/SQLite-3-lightgrey)
 
-## 📋 Índice
+## 📑 Índice
 
 - [Visão Geral](#-visão-geral)
 - [Funcionalidades](#-funcionalidades)
@@ -23,36 +23,36 @@ Sistema web desenvolvido em Django para gerenciar solicitações de segunda cham
 - [Estrutura de Arquivos](#-estrutura-de-arquivos)
 - [Contribuição](#-contribuição)
 
-## 🎯 Visão Geral
+## 🚀 Visão Geral
 
 O **Sistema de Solicitação de Segunda Chamada** é uma aplicação web que digitaliza e automatiza o processo de solicitação de segunda chamada de provas em instituições de ensino. O sistema permite que alunos façam solicitações fundamentadas com documentos comprobatórios, enquanto professores podem avaliar e responder a essas solicitações de forma organizada.
 
 ### Principais Benefícios:
-- ✅ **Processo Digital**: Elimina papelada e burocracias físicas
-- ✅ **Rastreabilidade**: Histórico completo de todas as solicitações
-- ✅ **Organização**: Interface clara para alunos e professores
-- ✅ **Documentação**: Upload de arquivos comprobatórios
-- ✅ **Eficiência**: Agiliza o processo de avaliação
+- 1. **Processo Digital**: Elimina papelada e burocracias físicas
+- 2. **Rastreabilidade**: Histórico completo de todas as solicitações
+- 3. **Organização**: Interface clara para alunos e professores
+- 4. **Documentação**: Upload de arquivos comprobatórios
+- 5. **Eficiência**: Agiliza o processo de avaliação
 
-## 🚀 Funcionalidades
+## 🔧 Funcionalidades
 
 ### Para Alunos:
-- 📝 **Registro e Login** no sistema
-- 📋 **Criar solicitações** de segunda chamada
-- 📎 **Upload de arquivos** comprobatórios (atestados, documentos, etc.)
-- 🔍 **Buscar e filtrar** suas próprias solicitações
-- 👀 **Acompanhar status** das solicitações (Pendente, Aprovada, Rejeitada)
-- 💬 **Visualizar observações** dos professores
-- 📊 **Dashboard personalizado** com resumo das solicitações
+- ✅ **Registro e Login** no sistema
+- ✅ **Criar solicitações** de segunda chamada
+- ✅ **Upload de arquivos** comprobatórios (atestados, documentos, etc.)
+- ✅ **Buscar e filtrar** suas próprias solicitações
+- ✅ **Acompanhar status** das solicitações (Pendente, Aprovada, Rejeitada)
+- ✅ **Visualizar observações** dos professores
+- ✅ **Dashboard personalizado** com resumo das solicitações
 
 ### Para Professores:
-- 👨‍🏫 **Login diferenciado** como professor
-- 📋 **Visualizar solicitações pendentes** que precisam de avaliação
+- ✅ **Login diferenciado** como professor
+- ✅ **Visualizar solicitações pendentes** que precisam de avaliação
 - ✅ **Aprovar ou rejeitar** solicitações
-- 💭 **Adicionar observações** às avaliações
-- 📄 **Visualizar arquivos** enviados pelos alunos
-- 📈 **Histórico completo** de avaliações realizadas
-- 🎯 **Interface focada** em produtividade
+- ✅ **Adicionar observações** às avaliações
+- ✅ **Visualizar arquivos** enviados pelos alunos
+- ✅ **Histórico completo** de avaliações realizadas
+- ✅ **Interface focada** em produtividade
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -73,26 +73,26 @@ O **Sistema de Solicitação de Segunda Chamada** é uma aplicação web que dig
 - **Django Management Commands**: Comandos personalizados
 - **Django Migrations**: Controle de versão do banco de dados
 
-## 📁 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```
 2Chamada/
 ├── .venv/                          # Ambiente virtual Python
 ├── media/                          # Arquivos enviados pelos usuários
-│   └── solicitacoes/              # Arquivos organizados por data
-├── segunda_chamada/               # Configurações do projeto Django
+├── solicitacoes/                   # Arquivos organizados por data
+├── segunda_chamada/                # Configurações do projeto Django
 │   ├── __init__.py
 │   ├── asgi.py
-│   ├── settings.py               # Configurações principais
-│   ├── urls.py                   # URLs principais do projeto
+│   ├── settings.py                 # Configurações principais
+│   ├── urls.py                     # URLs principais do projeto
 │   └── wsgi.py
-├── solicitacoes/                  # App principal
-│   ├── management/               # Comandos personalizados
+├── solicitacoes/                   # App principal
+│   ├── management/                 # Comandos personalizados
 │   │   └── commands/
 │   │       └── popular_disciplinas.py
-│   ├── migrations/               # Migrações do banco
-│   ├── static/                   # Arquivos estáticos
-│   ├── templates/                # Templates HTML
+│   ├── migrations/                 # Migrações do banco
+│   ├── static/                     # Arquivos estáticos
+│   ├── templates/                  # Templates HTML
 │   │   └── solicitacoes/
 │   │       ├── avaliar_solicitacao.html
 │   │       ├── dashboard_aluno.html
@@ -100,18 +100,18 @@ O **Sistema de Solicitação de Segunda Chamada** é uma aplicação web que dig
 │   │       ├── formulario.html
 │   │       ├── login.html
 │   │       └── registro.html
-│   ├── admin.py                  # Configurações do Django Admin
+│   ├── admin.py                    # Configurações do Django Admin
 │   ├── apps.py
-│   ├── models.py                 # Modelos de dados
+│   ├── models.py                   # Modelos de dados
 │   ├── tests.py
-│   ├── urls.py                   # URLs do app
-│   └── views.py                  # Lógica de negócio
-├── db.sqlite3                     # Banco de dados SQLite
-├── manage.py                      # Utilitário Django
-└── README.md                      # Documentação
+│   ├── urls.py                     # URLs do app
+│   └── views.py                    # Lógica de negócio
+├── db.sqlite3                      # Banco de dados SQLite
+├── manage.py                       # Utilitário Django
+└── README.md                       # Documentação
 ```
 
-## 🔧 Instalação e Configuração
+## 🛠️ Instalação e Configuração
 
 ### Pré-requisitos:
 - Python 3.11.9 ou superior
@@ -164,7 +164,7 @@ python manage.py runserver
 
 8. **Acesse o sistema**: http://127.0.0.1:8000
 
-## 🗄 Modelos de Dados
+## 🗂 Modelos de Dados
 
 ### 1. Perfil
 Extende o modelo User do Django para definir tipos de usuário.
@@ -182,9 +182,9 @@ class Perfil(models.Model):
 ```
 
 **Funcionalidades:**
-- ✅ Diferencia alunos de professores
-- ✅ Campo matricula para identificação única
-- ✅ Relacionamento um-para-um com User
+- 1. Diferencia alunos de professores
+- 2. Campo matricula para identificação única
+- 3. Relacionamento um-para-um com User
 
 ### 2. Disciplina
 Representa as disciplinas disponíveis no sistema.
@@ -198,10 +198,10 @@ class Disciplina(models.Model):
 ```
 
 **Funcionalidades:**
-- ✅ 20 disciplinas de TI pré-cadastradas
-- ✅ Código único para identificação
-- ✅ Sistema de ativação/desativação
-- ✅ Descrição detalhada de cada disciplina
+- 1. 20 disciplinas de TI pré-cadastradas
+- 2. Código único para identificação
+- 3. Sistema de ativação/desativação
+- 4. Descrição detalhada de cada disciplina
 
 ### 3. Solicitacao (Modelo Principal)
 Núcleo do sistema, representa cada solicitação de segunda chamada.
@@ -226,13 +226,13 @@ class Solicitacao(models.Model):
 ```
 
 **Funcionalidades Avançadas:**
-- ✅ **Upload de arquivos** organizados por ano/mês
-- ✅ **Propriedades customizadas** (`tem_arquivo`, `nome_arquivo`)
-- ✅ **Rastreamento temporal** (data solicitação/avaliação)
-- ✅ **Relacionamentos inteligentes** com lazy loading
-- ✅ **Sistema de status** com workflow definido
+- 1. **Upload de arquivos** organizados por ano/mês
+- 2. **Propriedades customizadas** (`tem_arquivo`, `nome_arquivo`)
+- 3. **Rastreamento temporal** (data solicitação/avaliação)
+- 4. **Relacionamentos inteligentes** com lazy loading
+- 5. **Sistema de status** com workflow definido
 
-## 🔐 Sistema de Autenticação
+## 🔒 Sistema de Autenticação
 
 ### Registro de Usuários:
 - **Campos obrigatórios**: username, nome, sobrenome, email, senha
@@ -258,7 +258,7 @@ except Perfil.DoesNotExist:
 - **Verificação de tipo**: Alunos não acessam área de professor
 - **Redirecionamento inteligente**: Usuários direcionados à área correta
 
-## 🖼 Interfaces do Sistema
+## 🖥 Interfaces do Sistema
 
 ### 1. Tela de Login
 - **Design moderno** com gradientes azuis
@@ -268,35 +268,35 @@ except Perfil.DoesNotExist:
 
 ### 2. Dashboard do Aluno
 **Funcionalidades:**
-- ✅ **Botão destacado** para nova solicitação
-- ✅ **Tabela completa** com todas as informações
-- ✅ **Busca em tempo real** por disciplina ou motivo
-- ✅ **Filtro por status** (Pendente, Aprovada, Rejeitada)
-- ✅ **Indicadores visuais** coloridos para status
-- ✅ **Links para arquivos** enviados
-- ✅ **Observações dos professores** visíveis
+- 1. **Botão destacado** para nova solicitação
+- 2. **Tabela completa** com todas as informações
+- 3. **Busca em tempo real** por disciplina ou motivo
+- 4. **Filtro por status** (Pendente, Aprovada, Rejeitada)
+- 5. **Indicadores visuais** coloridos para status
+- 6. **Links para arquivos** enviados
+- 7. **Observações dos professores** visíveis
 
 **Colunas da tabela:**
-- 📚 Disciplina (nome e código)
-- 💭 Motivo (truncado com reticências)
-- 📎 Arquivo (link ou "Sem arquivo")
-- 📅 Data de solicitação
-- 🎯 Status (com ícones e cores)
-- 👨‍🏫 Observações do professor
+- ✅ Disciplina (nome e código)
+- ✅ Motivo (truncado com reticências)
+- ✅ Arquivo (link ou "Sem arquivo")
+- ✅ Data de solicitação
+- ✅ Status (com ícones e cores)
+- ✅ Observações do professor
 
 ### 3. Dashboard do Professor
 **Seção 1 - Solicitações Pendentes:**
-- ⚠️ **Destaque visual** com ícone de alerta
-- 👥 **Informações do aluno** com avatar
-- 📋 **Detalhes da solicitação**
-- 🔗 **Botão "Avaliar"** para cada item
-- 📁 **Link para arquivos** enviados
+- 🚨 **Destaque visual** com ícone de alerta
+- ✅ **Informações do aluno** com avatar
+- ✅ **Detalhes da solicitação**
+- ✅ **Botão "Avaliar"** para cada item
+- ✅ **Link para arquivos** enviados
 
 **Seção 2 - Histórico de Avaliações:**
-- 📈 **Lista completa** de avaliações realizadas
-- 🏷️ **Status colorido** (aprovada/rejeitada)
-- 📅 **Data de avaliação**
-- 🔍 **Interface limpa** sem filtros
+- ✅ **Lista completa** de avaliações realizadas
+- ✅ **Status colorido** (aprovada/rejeitada)
+- ✅ **Data de avaliação**
+- ✅ **Interface limpa** sem filtros
 
 ### 4. Formulário de Nova Solicitação
 - **Dropdown de disciplinas** com todas as opções
@@ -332,10 +332,10 @@ def nome_arquivo(self):
 ```
 
 **Características:**
-- ✅ **Organização temporal**: Arquivos salvos em `/media/solicitacoes/YYYY/MM/`
-- ✅ **Validação automática**: Verificação de existência
-- ✅ **Nome limpo**: Extração do nome do arquivo
-- ✅ **Segurança**: Upload controlado pelo Django
+- 1. **Organização temporal**: Arquivos salvos em `/media/solicitacoes/YYYY/MM/`
+- 2. **Validação automática**: Verificação de existência
+- 3. **Nome limpo**: Extração do nome do arquivo
+- 4. **Segurança**: Upload controlado pelo Django
 
 ### 2. Sistema de Busca Dinâmica (JavaScript)
 ```javascript
@@ -358,10 +358,10 @@ function filterTable() {
 
 **Funcionalidades:**
 - ⚡ **Busca instantânea**: Sem recarregamento de página
-- 🔍 **Múltiplos campos**: Busca em disciplina e motivo
-- 🎯 **Filtro por status**: Dropdown independente
-- 📱 **Responsivo**: Funciona em mobile
-- 💡 **Feedback visual**: Mensagem quando não há resultados
+- ✅ **Múltiplos campos**: Busca em disciplina e motivo
+- ✅ **Filtro por status**: Dropdown independente
+- ✅ **Responsivo**: Funciona em mobile
+- ✅ **Feedback visual**: Mensagem quando não há resultados
 
 ### 3. Management Command para Disciplinas
 ```python
@@ -383,9 +383,9 @@ class Command(BaseCommand):
 ```
 
 **Vantagens:**
-- 🚀 **Setup rápido**: 20 disciplinas criadas automaticamente
-- 🔄 **Idempotente**: Não duplica registros existentes
-- 📚 **Conteúdo relevante**: Disciplinas de TI atuais
+- ✅ **Setup rápido**: 20 disciplinas criadas automaticamente
+- ✅ **Idempotente**: Não duplica registros existentes
+- ✅ **Conteúdo relevante**: Disciplinas de TI atuais
 - ✅ **Feedback visual**: Mostra o que foi criado/já existia
 
 ## 🌐 API e URLs
@@ -438,7 +438,7 @@ urlpatterns = [
 - **Dados**: Solicitação específica + arquivo
 - **Ação**: Aprovar/rejeitar + observações
 
-## 📱 Como Usar
+## 📚 Como Usar
 
 ### Para Alunos:
 
@@ -503,7 +503,7 @@ urlpatterns = [
 - **Mobile Friendly**: Tabelas scrolláveis horizontalmente
 - **Touch Targets**: Botões com tamanho adequado para mobile
 
-## 🔧 Estrutura de Arquivos Detalhada
+## 🗃 Estrutura de Arquivos Detalhada
 
 ### Templates (Frontend):
 ```
@@ -519,10 +519,10 @@ templates/solicitacoes/
 ### Models (Backend):
 ```python
 # Relacionamentos:
-User (Django) ←→ Perfil (OneToOne)
-User ←→ Solicitacao (ForeignKey - aluno)
-User ←→ Solicitacao (ForeignKey - professor_responsavel)
-Disciplina ←→ Solicitacao (ForeignKey)
+User (Django) ↔ Perfil (OneToOne)
+User ↔ Solicitacao (ForeignKey - aluno)
+User ↔ Solicitacao (ForeignKey - professor_responsavel)
+Disciplina ↔ Solicitacao (ForeignKey)
 ```
 
 ### Media Files:
@@ -537,7 +537,7 @@ media/
         └── ...
 ```
 
-## 🚀 Possíveis Melhorias Futuras
+## 🔮 Possíveis Melhorias Futuras
 
 ### Funcionalidades:
 - [ ] **Notificações por email** quando status muda
@@ -580,17 +580,19 @@ Este projeto foi desenvolvido como sistema educacional e pode ser expandido conf
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
+## 📝 Licença
 
 Este projeto é open source e está disponível sob a licença MIT.
 
 ---
 
-**Desenvolvido com ❤️ usando Django + TailwindCSS**
+**Desenvolvido com 💙 usando Django + TailwindCSS**
 
-*Sistema completo e funcional para gerenciamento de solicitações de segunda chamada em instituições de ensino.*## Fluxo de aprova��o (Coordena��o ? Secretaria ? Professor)
-- Tr�s etapas sequenciais: coordena��o aprova primeiro, depois secretaria, depois professor.
-- Justificativa obrigat�ria para coordena��o ou qualquer rejei��o.
-- Prazo configurado por solicita��o; se expirar sem conclus�o, o pedido � rejeitado automaticamente.
-- Aluno recebe notifica��o interna em cada decis�o e ao expirar o prazo.
-- Dashboards mostram fila por papel e hist�rico das avalia��es feitas.
+*Sistema completo e funcional para gerenciamento de solicitações de segunda chamada em instituições de ensino.*
+
+## Fluxo de aprovação (Coordenação → Secretaria → Professor)
+- Três etapas sequenciais: coordenação aprova primeiro, depois secretaria, depois professor.
+- Justificativa obrigatória para coordenação ou qualquer rejeição.
+- Prazo configurado por solicitação; se expirar sem conclusão, o pedido é rejeitado automaticamente.
+- Aluno recebe notificação interna em cada decisão e ao expirar o prazo.
+- Dashboards mostram fila por papel e histórico das avaliações feitas.
