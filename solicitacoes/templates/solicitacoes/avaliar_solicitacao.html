@@ -34,7 +34,7 @@
                         <i class="fas fa-gavel text-white text-2xl"></i>
                     </div>
                     <div class="ml-4">
-                        <h1 class="text-xl font-bold text-white">Avaliar Solicitação</h1>
+                        <h1 class="text-xl font-bold text-white">Avaliar Solicitação - {{ papel|title }}</h1>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -49,13 +49,18 @@
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-xl shadow-lg mb-8">
-            <div class="px-8 py-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8 space-y-6">
+        <div class="bg-white rounded-xl shadow-lg">
+            <div class="px-8 py-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center justify-between">
                 <h2 class="text-2xl font-bold text-gray-900 flex items-center">
                     <i class="fas fa-file-alt mr-3 text-blue-600"></i>
                     Detalhes da Solicitação
                 </h2>
+                {% if solicitacao.data_limite %}
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium {% if solicitacao.prazo_expirado %}bg-red-100 text-red-800{% else %}bg-gray-100 text-gray-800{% endif %}">
+                        <i class="fas fa-hourglass-half mr-1"></i> Prazo: {{ solicitacao.data_limite|date:"d/m/Y H:i" }}
+                    </span>
+                {% endif %}
             </div>
             
             <div class="px-8 py-6 space-y-6">
@@ -143,6 +148,27 @@
                     </div>
                 </div>
                 {% endif %}
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                        <i class="fas fa-stream mr-2 text-blue-600"></i>
+                        Status das Etapas
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-lg border {% if solicitacao.coordenador_status == 'aprovada' %}border-green-200 bg-green-50{% elif solicitacao.coordenador_status == 'rejeitada' %}border-red-200 bg-red-50{% else %}border-yellow-200 bg-yellow-50{% endif %}">
+                            <p class="text-sm font-semibold text-gray-700">Coordenação</p>
+                            <p class="text-sm text-gray-800">{{ solicitacao.coordenador_status|title }}</p>
+                        </div>
+                        <div class="p-4 rounded-lg border {% if solicitacao.secretaria_status == 'aprovada' %}border-green-200 bg-green-50{% elif solicitacao.secretaria_status == 'rejeitada' %}border-red-200 bg-red-50{% else %}border-yellow-200 bg-yellow-50{% endif %}">
+                            <p class="text-sm font-semibold text-gray-700">Secretaria</p>
+                            <p class="text-sm text-gray-800">{{ solicitacao.secretaria_status|title }}</p>
+                        </div>
+                        <div class="p-4 rounded-lg border {% if solicitacao.professor_status == 'aprovada' %}border-green-200 bg-green-50{% elif solicitacao.professor_status == 'rejeitada' %}border-red-200 bg-red-50{% else %}border-yellow-200 bg-yellow-50{% endif %}">
+                            <p class="text-sm font-semibold text-gray-700">Professor</p>
+                            <p class="text-sm text-gray-800">{{ solicitacao.professor_status|title }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -152,6 +178,7 @@
                     <i class="fas fa-clipboard-check mr-3 text-green-600"></i>
                     Avaliação da Solicitação
                 </h2>
+                <p class="text-sm text-gray-500 mt-1">Coordenação deve justificar aprovação/rejeição.</p>
             </div>
             
             <form method="post" class="px-8 py-6 space-y-6">
@@ -196,14 +223,14 @@
                 <div>
                     <label for="observacoes" class="block text-sm font-medium text-gray-700 mb-2">
                         <i class="fas fa-sticky-note mr-2 text-blue-600"></i>
-                        Observações (opcional)
+                        Justificativa (obrigatória para coordenação)
                     </label>
                     <textarea id="observacoes" name="observacoes" rows="4"
                               placeholder="Adicione comentários sobre sua decisão..."
                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-vertical"></textarea>
                     <p class="text-sm text-gray-500 mt-1">
                         <i class="fas fa-info-circle mr-1"></i>
-                        Comentários ajudam o aluno a compreender sua decisão
+                        Comentários ajudam o aluno a compreender sua decisão e são obrigatórios para reprovar.
                     </p>
                 </div>
                 
