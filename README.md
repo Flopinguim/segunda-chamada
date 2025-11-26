@@ -588,4 +588,9 @@ Este projeto Ã© open source e estÃ¡ disponÃ­vel sob a licenÃ§a MIT.
 
 **Desenvolvido com â¤ï¸ usando Django + TailwindCSS**
 
-*Sistema completo e funcional para gerenciamento de solicitaÃ§Ãµes de segunda chamada em instituiÃ§Ãµes de ensino.*
+*Sistema completo e funcional para gerenciamento de solicitaÃ§Ãµes de segunda chamada em instituiÃ§Ãµes de ensino.*## Fluxo de aprovação (Coordenação ? Secretaria ? Professor)
+- Três etapas sequenciais: coordenação aprova primeiro, depois secretaria, depois professor.
+- Justificativa obrigatória para coordenação ou qualquer rejeição.
+- Prazo configurado por solicitação; se expirar sem conclusão, o pedido é rejeitado automaticamente.
+- Aluno recebe notificação interna em cada decisão e ao expirar o prazo.
+- Dashboards mostram fila por papel e histórico das avaliações feitas.
